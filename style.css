@@ -1,0 +1,184 @@
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .clearfix::after {
+
+    content: "";
+    display: block;
+    clear: both;
+
+  }
+
+  /* Main elements */
+
+  html {
+
+    font-family: 'Roboto', sans-serif;
+  }
+
+  h2 {
+
+    text-align: center;
+    background-color: black;
+
+    color: white;
+
+    height: 50px;
+    line-height: 50px;
+  }
+
+  .wrapper {
+
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+
+  /* Header -> The main elment -> minimalistic and informative */
+
+  header {}
+
+  /* Header -> contact */
+
+  header .contact {
+
+    padding: 20px 20px 60px 20px;
+
+    font-size: 20px;
+    text-align: center;
+
+    background-color: #42474C;
+    
+    color: white;
+  }
+
+  header .contact p:nth-child(1) {
+
+    margin-bottom: 10px;
+  }
+
+  header .contact p:nth-child(2) i {
+
+    padding: 0 10px;
+
+    font-size: 40px;
+  }
+
+  /* Header -> nav */
+
+  header nav {
+
+    text-align: center;
+
+    position: relative;
+
+    /* position -> relative -> the element stays in the document structure */
+
+    top: -50px;
+  }
+
+  header nav ul {
+
+    list-style: none;
+
+    /* Nav would be in the center  */
+
+    display: inline-block;
+  }
+
+  header nav ul li {
+
+    float: left;
+  }
+
+  header nav ul li button {
+
+    /* A menu elemement would be a square */
+
+    height: 130px;
+    width: 130px;
+
+    padding: 10px 20px;
+
+    font-size: 20px;
+
+    border: none;
+  }
+
+  /* Every element has a different color */
+
+  header nav ul li:nth-child(1) button {
+
+    background-color: #3490FF;
+  }
+
+  header nav ul li:nth-child(2) button {
+
+    background-color: #1A81FD;
+  }
+
+  header nav ul li:nth-child(3) button {
+
+    background-color: #117AF8;
+  }
+
+  /* Two main elements in the center of the header */
+
+  header .wrapper {
+
+    width: 80%;
+
+    margin-bottom: 50px;
+
+    border-radius: 2%;
+  }
+
+  header .about,
+  header .img {
+
+    float: left;
+
+    width: 50%;
+    border-radius: 2%;
+
+    /* The height of this element is to reconsider */
+
+    height: 35vh;
+  }
+
+  header .about {
+
+    /* To create space between elements */
+
+    border-right: 5px solid white;
+
+    background-color: rgba(66, 71, 76, 0.21);
+  }
+
+  header .img {
+
+     border-left: 5px solid white;
+
+    background-color: rgba(66, 71, 76, 0.21);
+  }
+
+  /* The last element of the header -> to navigate towards the bottom */
+
+  header .next {
+
+    background-color: #42474C;
+  }
+
+  header .next p {
+
+    line-height: 60px;
+
+    font-size: 40px;
+
+    text-align: center;
+
+    color: white;
+  }
