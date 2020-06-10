@@ -1,184 +1,252 @@
 * {
 
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  .clearfix::after {
+.clearfix::after {
 
-    content: "";
-    display: block;
-    clear: both;
+  content: "";
+  display: block;
+  clear: both;
 
-  }
+}
 
-  /* Main elements */
+/* Main elements */
 
-  html {
+html {
 
-    font-family: 'Roboto', sans-serif;
-  }
+  font-family: 'Roboto', sans-serif;
+}
 
-  h2 {
+h2 {
 
-    text-align: center;
-    background-color: black;
+  text-align: center;
+  background-color: #42474C;
 
-    color: white;
+  color: white;
 
-    height: 50px;
-    line-height: 50px;
-  }
+  height: 50px;
+  line-height: 50px;
 
-  .wrapper {
+  font-weight: normal;
+}
 
-    max-width: 1280px;
-    margin: 0 auto;
-  }
+.wrapper {
 
-  /* Header -> The main elment -> minimalistic and informative */
+  max-width: 1280px;
+  margin: 0 auto;
+}
 
-  header {}
+/* Header -> The main elment -> minimalistic and informative */
 
-  /* Header -> contact */
+header {}
 
-  header .contact {
+/* Header -> contact */
 
-    padding: 20px 20px 60px 20px;
+header .contact {
 
-    font-size: 20px;
-    text-align: center;
+  padding: 20px 20px 60px 20px;
 
-    background-color: #42474C;
-    
-    color: white;
-  }
+  font-size: 20px;
+  text-align: center;
 
-  header .contact p:nth-child(1) {
+  background-color: #42474C;
 
-    margin-bottom: 10px;
-  }
+  color: white;
+}
 
-  header .contact p:nth-child(2) i {
+header .contact p:nth-child(1) {
 
-    padding: 0 10px;
+  margin-bottom: 10px;
+}
 
-    font-size: 40px;
-  }
+header .contact p:nth-child(2) i {
 
-  /* Header -> nav */
+  padding: 0 10px;
 
-  header nav {
+  font-size: 40px;
+}
 
-    text-align: center;
+/* Header -> nav */
 
-    position: relative;
+header nav {
 
-    /* position -> relative -> the element stays in the document structure */
+  text-align: center;
 
-    top: -50px;
-  }
+  position: relative;
 
-  header nav ul {
+  /* position -> relative -> the element stays in the document structure */
 
-    list-style: none;
+  top: -50px;
+}
 
-    /* Nav would be in the center  */
+header nav ul {
 
-    display: inline-block;
-  }
+  list-style: none;
 
-  header nav ul li {
+  /* Nav would be in the center  */
 
-    float: left;
-  }
+  display: inline-block;
+}
 
-  header nav ul li button {
+header nav ul li {
 
-    /* A menu elemement would be a square */
+  float: left;
+}
 
-    height: 130px;
-    width: 130px;
+header nav ul li button {
 
-    padding: 10px 20px;
+  /* A menu elemement would be a square */
 
-    font-size: 20px;
+  height: 130px;
+  width: 130px;
 
-    border: none;
-  }
+  padding: 10px 20px;
 
-  /* Every element has a different color */
+  font-size: 20px;
 
-  header nav ul li:nth-child(1) button {
+  border: none;
+}
 
-    background-color: #3490FF;
-  }
+/* Every element has a different color */
 
-  header nav ul li:nth-child(2) button {
+header nav ul li:nth-child(1) button {
 
-    background-color: #1A81FD;
-  }
+  background-color: #3490FF;
+}
 
-  header nav ul li:nth-child(3) button {
+header nav ul li:nth-child(2) button {
 
-    background-color: #117AF8;
-  }
+  background-color: #1A81FD;
+}
 
-  /* Two main elements in the center of the header */
+header nav ul li:nth-child(3) button {
 
-  header .wrapper {
+  background-color: #117AF8;
+}
 
-    width: 80%;
+/* Two main elements in the center of the header */
 
-    margin-bottom: 50px;
+header .wrapper {
 
-    border-radius: 2%;
-  }
+  width: 80%;
 
-  header .about,
-  header .img {
+  margin-bottom: 50px;
 
-    float: left;
+  border-radius: 2%;
+}
 
-    width: 50%;
-    border-radius: 2%;
+header .about,
+header .img {
 
-    /* The height of this element is to reconsider */
+  float: left;
 
-    height: 35vh;
-  }
+  width: 50%;
+  border-radius: 2%;
 
-  header .about {
+  /* The height of this element is to reconsider */
 
-    /* To create space between elements */
+  height: 35vh;
+}
 
-    border-right: 5px solid white;
+header .about {
 
-    background-color: rgba(66, 71, 76, 0.21);
-  }
+  /* To create space between elements */
 
-  header .img {
+  border-right: 5px solid white;
 
-     border-left: 5px solid white;
+  background-color: rgba(66, 71, 76, 0.21);
+}
 
-    background-color: rgba(66, 71, 76, 0.21);
-  }
+header .img {
 
-  /* The last element of the header -> to navigate towards the bottom */
+  border-left: 5px solid white;
 
-  header .next {
+  background-color: rgba(66, 71, 76, 0.21);
+}
 
-    background-color: #42474C;
-  }
+/* The last element of the header -> to navigate towards the bottom */
 
-  header .next p {
+header .next {
 
-    line-height: 60px;
+  background-color: #42474C;
+}
 
-    font-size: 40px;
+header .next p {
 
-    text-align: center;
+  line-height: 60px;
 
-    color: white;
-  }
+  font-size: 40px;
+
+  text-align: center;
+
+  color: white;
+}
+
+/* Skills section */
+
+.skills {
+
+  /* This is reallly nice color -> I think I will use it to the entire project */
+
+  background-color: aliceblue;
+}
+
+.skills h2 {
+
+  border-top: 5px solid white;
+}
+
+.skills .wrapper {
+
+  padding: 100px 20px;
+}
+
+.skills .skill {
+
+  /* Skill element contains all the skills grouped together */
+
+  float: left;
+
+  padding: 30px;
+
+  width: 33.33%;
+  height: 200px;
+
+  font-size: 18px;
+}
+
+/* I'm using the same theme as in the main navigation */
+
+.skills .skill ul {
+
+  list-style: none;
+}
+
+.skills .skill:nth-child(1) {
+
+  background-color: #3490FF;
+}
+
+.skills .skill:nth-child(2) {
+
+  background-color: #1A81FD;
+
+}
+
+.skills .skill:nth-child(3) {
+
+  background-color: #117AF8;
+}
+
+.skill h3 {
+
+  margin-bottom: 30px;
+}
+
+.skill i {
+
+  width: 30px;
+}
