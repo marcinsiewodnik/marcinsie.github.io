@@ -250,3 +250,86 @@ header .next p {
 
   width: 30px;
 }
+
+/* Portfolio section */
+
+.portfolio {
+
+  background-color: aliceblue;
+
+}
+
+.portfolio .wrapper {
+
+  /* Portfolio should be a bit smaller than other sections */
+
+  width: 60%;
+
+  padding: 100px 20px;
+}
+
+.portfolio .project {
+
+  border-top: 20px solid #333;
+
+  /* Padding on the project -> thinking how it should look like on mobile phones */
+
+  padding: 20px;
+}
+
+/* Different colors of the projects -> the same convention */
+
+.portfolio .project:nth-of-type(1) {
+
+  background-color: #3490FF;
+}
+
+.portfolio .project:nth-of-type(2) {
+
+  background-color: #1A81FD;
+}
+
+/* The layout of a project element */
+
+.portfolio .project>div {
+
+  float: left;
+}
+
+.portfolio .project .info {
+
+  width: 30%;
+}
+
+.portfolio .project .about {
+
+  width: 70%;
+}
+
+/* Two areas to desing -> info and about */
+
+.portfolio .project .info p {
+
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.portfolio .project .about h3 {
+
+  padding-bottom: 20px;
+}
+
+.portfolio .project .about p {
+
+  padding: 0 40px 20px 0;
+
+  line-height: 170%;
+}
+
+.portfolio .project .about button {
+
+  background-color: transparent;
+  border: 2px solid black;
+
+  padding: 10px 20px;
+}
