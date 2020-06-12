@@ -10,30 +10,37 @@
   content: "";
   display: block;
   clear: both;
-
 }
 
-/* Main elements */
+:root {
+
+  --backgroundColor: aliceblue;
+  --mainColor: #42474C;
+
+}
 
 html {
 
   font-family: 'Roboto', sans-serif;
 
-  background-color: aliceblue;
+  background-color: var(--backgroundColor);
 }
+
+/* Common elements */
 
 h2 {
 
-  text-align: center;
-
-  background-color: #42474C;
-  color: white;
-
-  /* Paddings -> it will be displayed properlny on mobile devices */
+  /* h2 represents a beginning of each section */
+  /* Padding -> it will be displayed well on mobile devices */
 
   padding: 10px 30px;
 
+  font-size: 24px;
   font-weight: normal;
+  text-align: center;
+
+  background-color: var(--mainColor);
+  color: white;
 }
 
 .wrapper {
@@ -44,9 +51,8 @@ h2 {
   margin: 0 auto;
 }
 
-/* Header -> The main elment -> minimalistic and informative */
 
-header {}
+
 
 /* Header -> contact */
 
@@ -57,7 +63,6 @@ header .contact {
   text-align: center;
 
   background-color: #42474C;
-
   color: white;
 }
 
@@ -75,41 +80,48 @@ header .contact p:nth-child(2) i {
   font-size: 40px;
 }
 
+@media(min-width: 1024px) {
+
+  header .contact {
+
+    min-height: 200px;
+  }
+
+  header .contact p:nth-child(1) {
+
+    font-size: 24px;
+  }
+
+  header .contact p:nth-child(2) i {
+
+    font-size: 60px;
+  }
+
+}
+
+
+
+
+
 /* Header -> nav */
 
 header nav {
 
   text-align: center;
-
-  /* position: relative; */
-
 }
 
 header nav ul {
 
   list-style: none;
-
-}
-
-header nav ul li {
-
-  /* float: left; */
 }
 
 header nav ul li button {
-
-  /* A menu elemement would be a square */
-
-  /* height: 130px;
-  width: 130px; */
-
-  /* display: block; */
 
   width: 100%;
   padding: 30px 30px;
   border: none;
 
-  font-size: 20px;
+  font-size: 24px;
 }
 
 /* Every element has a different color */
@@ -129,49 +141,58 @@ header nav ul li:nth-child(3) button {
   background-color: #117AF8;
 }
 
-/* Two main elements in the center of the header */
+@media(min-width: 1024px) {
 
-header .wrapper {
+  header nav ul {
 
-  /* On mobile devices the element should take all the space (width: 100%) */
+    position: relative;
 
-  /* width: 80%; */
+    left: 0;
+    top: -75px;
 
-  /* margin-bottom: 50px; */
+    width: 600px;
+    margin: 0 auto;
+  }
 
-  border-radius: 2%;
+  header nav ul li {
+
+    float: left;
+  }
+
+  header nav ul li button {
+
+    width: 200px;
+    height: 150px;
+
+    border: none;
+
+    font-size: 30px;
+  }
 }
+
+
+
+
+/* Two main elements in the center of the header */
 
 header .about,
 header .img {
 
-  /* float: left; */
-
-  /* width: 50%; */
-
   border-radius: 2%;
-
-  /* The height of this element is to reconsider */
-
-  /* height: 45vh; */
-
   margin: 20px;
 }
 
 header .about {
 
-  /* To create space between elements */
-
-  /* border-right: 5px solid white; */
+  padding-bottom: 20px;
 
   background-color: rgba(66, 71, 76, 0.21);
-
-  padding-bottom: 20px;
 }
 
 header .about p {
 
   padding: 10px;
+
 }
 
 header .about h1 {
@@ -183,73 +204,139 @@ header .about h1 {
 
 header .img {
 
-  /* border-left: 5px solid white; */
+  height: 45vh;
 
   background-color: rgba(66, 71, 76, 0.21);
-
-  height: 45vh;
 }
+
+@media(min-width: 1024px) {
+
+  header .wrapper {
+
+    width: 80%;
+
+    padding-bottom: 50px;
+
+    /* This element would be responsive on the first page */
+
+    height: calc(100vh - (200px + 150px + 75px));
+  }
+
+  header .about,
+  header .img {
+
+    float: left;
+
+    width: 50%;
+    height: 100%;
+
+    border-radius: 2%;
+
+    margin: 0;
+  }
+
+
+  header .about {
+
+    padding-bottom: 20px;
+    border-right: 5px solid var(--backgroundColor);
+
+    background-color: rgba(66, 71, 76, 0.21);
+  }
+
+  header .about p {
+
+    font-size: 24px;
+  }
+
+  header .about h1 {
+
+    font-size: 32px;
+
+  }
+
+  header .img {
+
+    border-left: 5px solid var(--backgroundColor);
+  }
+
+}
+
+
+
 
 /* The last element of the header -> to navigate towards the bottom */
 
 header .next {
 
-  background-color: #42474C;
+  background-color: var(--mainColor);
 }
 
 header .next p {
 
-  line-height: 60px;
-
   font-size: 40px;
+  line-height: 60px;
 
   text-align: center;
 
   color: white;
 }
 
-/* Skills section */
+@media(min-width: 1024px) {
 
-.skills {
+  header .next {
 
-  /* This is reallly nice color -> I think I will use it to the entire project */
+    height: 75px;
+  }
 
-  background-color: aliceblue;
+  header .next p {
+
+    line-height: 75px;
+
+    background-color: var(--mainColor);
+  }
+
 }
+
+
+
+
+
+/* Skills section */
 
 .skills h2 {
 
   border-top: 5px solid white;
-}
 
-.skills .wrapper {
-
-  /* This is a desing decision -> I want a skill element to cover all the space (width) */
-
-  /* 
-  padding: 20px 20px; */
 }
 
 .skills .skill {
 
-  /* Skill element contains all the skills grouped together */
-
-  /* float: left; */
-
   padding: 20px 30px 30px 30px;
-
-  /* width: 33.33%; */
-  /* height: 200px; */
 
   font-size: 16px;
 }
 
-/* I'm using the same theme as in the main navigation */
+.skill h3 {
+
+  margin-bottom: 20px;
+
+  font-size: 18px;
+}
+
+.skill i {
+
+  /* To remove the text from the icon */
+
+  width: 30px;
+}
 
 .skills .skill ul {
 
   list-style: none;
 }
+
+/* I'm using the same theme as in the main navigation */
 
 .skills .skill:nth-child(1) {
 
@@ -267,41 +354,112 @@ header .next p {
   background-color: #117AF8;
 }
 
-.skill h3 {
 
-  margin-bottom: 20px;
+@media(orientation:landscape) {
+
+  .skills .skill {
+
+    padding-bottom: 40px;
+  }
+
+  .skills .skill h3 {
+
+    text-align: center;
+  }
+
+  .skills .skill ul {
+
+    width: 80%;
+
+    margin: 0 auto;
+  }
+
 }
 
-.skill i {
 
-  width: 30px;
+@media(min-width: 1024px) {
+
+  .skills .wrapper {
+
+    width: 80%;
+
+    padding-top: 50px;
+    padding-bottom: 100px;
+
+  }
+
+  .skills .skill {
+
+    float: left;
+
+    width: 33.33%;
+    height: 200px;
+
+    padding: 20px 30px 30px 30px;
+
+    font-size: 16px;
+  }
+
+  .skills .skill ul {
+
+    width: 100%;
+
+  }
+
 }
+
+
+
+
+
 
 /* Portfolio section */
 
-.portfolio {}
-
-.portfolio .wrapper {
-
-  /* Portfolio should be a bit smaller than other sections */
-  /* But on mobile devices we want each project element to cover all the space */
-  /* 
-  width: 60%; */
-
-  /* padding: 50px 20px 100px 20px; */
-}
-
 .portfolio .project {
 
-  /* border-top: 20px solid #333; */
-
-  /* Padding on the project -> thinking how it should look like on mobile phones */
-  /* 
-  padding: 20px; */
-  /* border-bottom: 2px solid black; */
-
   padding-bottom: 20px;
+}
 
+/* The layout of a project element */
+
+.portfolio .project .info p {
+
+  padding: 10px 0;
+
+  font-size: 20px;
+  font-weight: bold;
+
+  text-align: center;
+
+  background-color: #42474c1d;
+}
+
+.portfolio .project .about {
+
+  padding: 0 30px;
+}
+
+.portfolio .project .about h3 {
+
+  padding: 15px 0;
+
+  font-size: 18px;
+}
+
+.portfolio .project .about p {
+
+  padding-bottom: 10px;
+
+  line-height: 180%;
+  font-size: 14px;
+}
+
+.portfolio .project .about button {
+
+  padding: 5px;
+  border: 2px solid black;
+
+  background-color: transparent;
 }
 
 /* Different colors of the projects -> the same convention */
@@ -316,110 +474,130 @@ header .next p {
   background-color: rgba(52, 143, 255, 0.2);
 }
 
-/* The layout of a project element */
+@media(min-width: 1024px) {
 
-.portfolio .project .info,
-.portfolio .project .about {
+  .portfolio .wrapper {
 
-  /* float: left; */
+    width: 60%;
 
-  text-align: center;
+    padding-top: 50px;
+    padding-bottom: 100px;
+  }
 }
 
-.portfolio .project .info {
 
-  /* width: 30%; */
 
-  background-color: #42474c1d;
+
+
+/* About me section */
+
+.cv {
+
+  min-height: calc(100vh - 150px);
 }
 
-.portfolio .project .info p {
+.cv .description {
 
-  padding: 10px 0;
-
-  font-size: 20px;
-  font-weight: bold;
-}
-
-.portfolio .project .about {
-
-  /* border-top: 2px solid black; */
-
-  /* width: 70%; */
-
-  text-align: left;
-
-  /* padding: 20px; */
-
-  padding: 0 30px;
-}
-
-.portfolio .project .about h3 {
-
-  padding: 15px 0;
-}
-
-.portfolio .project .about p {
-
-  font-size: 14px;
-
-  line-height: 180%;
-
-  padding-bottom: 10px;
-}
-
-.portfolio .project .about button {
-
-  background-color: transparent;
-  border: 2px solid black;
-
-  padding: 5px;
-}
-
-/* About me section -> simple and minimalistic */
-
-.about .wrapper {
-
-  /* width: 70%; */
-  /* padding: 50px 20px 100px 20px; */
-
-  padding: 30px;
-}
-
-.about p.description {
+  padding: 20px 30px;
 
   font-size: 14px;
   line-height: 180%;
   text-align: justify;
 }
 
+@media(orientation:landscape) {
+
+  .cv .description {
+
+    padding-left: 60px;
+    padding-right: 60px;
+
+  }
+}
+
+@media(min-width: 1024px) {
+
+  .cv {
+
+    min-height: calc(100vh - 200px);
+  }
+
+  .cv .wrapper {
+
+    width: 70%;
+
+    padding-top: 50px;
+    padding-bottom: 100px;
+
+  }
+
+  .cv .description {
+
+    font-size: 24px;
+  }
+
+}
+
+
+
 /* Footer section */
 
 footer {
 
+  height: 150px;
+
   padding: 20px 30px;
-  font-size: 16px;
+
   text-align: center;
+
   color: white;
-  background-color: #42474C;
+  background-color: var(--mainColor);
 }
 
 footer p:nth-child(1) {
 
-  font-size: 14px;
+  margin-bottom: 10px;
 
-  padding-bottom: 10px;
-
+  font-size: 16px;
 }
 
 footer p:nth-child(2) {
 
-  padding-bottom: 10px;
+  margin-bottom: 10px;
 
+  font-size: 18px;
 }
 
-footer i {
+footer p i {
 
-  padding: 0 5px;
+  margin: 0 5px;
   font-size: 40px;
+}
+
+@media(min-width: 1024px) {
+
+  footer {
+
+    height: 200px;
+  }
+
+  footer p:nth-child(1) {
+
+    margin-bottom: 15px;
+
+    font-size: 18px;
+
+  }
+
+  footer p:nth-child(2) {
+
+    margin-bottom: 15px;
+
+    font-size: 20px;
+  }
+
+  footer p i {
+
+    font-size: 50px;
+  }
 }
