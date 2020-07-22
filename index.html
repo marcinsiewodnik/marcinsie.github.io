@@ -10,60 +10,89 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;600&display=swap" rel="stylesheet">
 
-  <!-- font-family: 'Roboto', sans-serif; -->
+  <link rel="stylesheet" href="stylesheets/style.css">
 
-  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
   <header>
 
-    <section class="contact">
+    <div class="contact">
 
       <p>Visit me on LinkedIn or Github!</p>
 
-      <p><i class="fab fa-github-square"></i><i class="fab fa-linkedin"></i></p>
+      <p>
 
-    </section>
+        <a href="https://github.com/marcinsiewodnik"><i class="fab fa-github-square"></i></a>
 
-    <nav>
+        <a href="https://pl.linkedin.com/in/marcin-siewodnik-4681a6141"><i class="fab fa-linkedin"></i></a>
 
-      <ul class="clearfix">
+      </p>
 
-        <li><button>Skills</button></li>
-        <li><button>Portfolio</button></li>
-        <li><button>About</button></li>
+    </div>
 
-      </ul>
-    </nav>
+    <nav class="mobile-nav">
 
-    <div class="wrapper clearfix">
+      <div class="burger-wrapper">
 
-      <div class="about">
+        <div class="burger">
 
-        <div class="content">
-
-
-          <p>Hello World!</p>
-
-          <h1>I'm Marcin Siewodnik</h1>
-
-          <p>And I love programming!</p>
-
+          <i class="fas fa-bars"></i>
+          <i class="fas fa-angle-up off"></i>
 
         </div>
 
       </div>
 
-      <div class="img"></div>
+      <ul class="off">
 
-    </div>
+        <li><a href="#" data-nav="skills">Skills</a></li>
+        <li><a href="#" data-nav="portfolio">Portfolio</a></li>
+        <li><a href="#" data-nav="about">About</a></li>
 
-    <div class="next">
+      </ul>
 
-      <p> <i class="fas fa-arrow-circle-down"></i></p>
+    </nav>
+
+    <nav class="desktop-nav">
+
+      <ul>
+
+        <li><a href="#" data-nav="skills">Skills</a></li>
+        <li><a href="#" data-nav="portfolio">Portfolio</a></li>
+        <li><a href="#" data-nav="about">About</a></li>
+
+      </ul>
+
+    </nav>
+
+    <div class="info">
+
+      <div class="hello">
+
+        <div class="content">
+
+          <p>Hello World!</p>
+
+          <h1>I'm Marcin Siewodnik</h1>
+
+          <p>And this is my programming journey</p>
+
+        </div>
+
+      </div>
+
+      <div class="description">
+
+        My approach is project-based. I love java and javascript. My strenghts are algorithms and
+        design patterns. I think that programming is about peaple and good communication. Where does the road on the
+        picture
+        lead? See my projects and tell me!
+
+      </div>
 
     </div>
 
@@ -71,45 +100,60 @@
 
   <main>
 
-    <section class="skills">
+    <section class="skills" data-section="skills">
 
       <h2>Skills</h2>
 
-      <div class="wrapper clearfix">
+      <div class="wrapper-main">
 
-        <div class="skill">
+        <div class="wrapper">
 
-          <h3>General</h3>
+          <div class="skill">
 
-          <ul>
+            <h3>General</h3>
 
-            <li> <i class="fas fa-laptop-code"></i>Algorithms</li>
-            <li> <i class="fas fa-cubes"></i>Data sctructures</li>
-            <li> <i class="fas fa-cogs"></i>Design patterns</li>
+            <ul>
 
-          </ul>
-        </div>
+              <li> <span>Algorithms</span> </li>
+              <li> <span>Data sctructures</span> </li>
+              <li> <span>Design patterns</span> </li>
+              <li> <span>html</span> </li>
+              <li> <span>css</span> </li>
+              <li><span>SQL</span></li>
+              <li><span>Mongo DB</span></li>
 
-        <div class="skill">
 
-          <h3>Core technologies</h3>
+            </ul>
+          </div>
 
-          <ul>
-            <li><i class="fab fa-html5"></i>html5</li>
-            <li> <i class="fab fa-css3-alt"></i>CSS</li>
-            <li> <i class="fab fa-js-square"></i>JavaScript ES6</li>
-          </ul>
+          <div class="skill">
 
-        </div>
+            <h3>Javascript</h3>
 
-        <div class="skill">
+            <ul>
+              <li> <span>Javascript ES6</span> </li>
+              <li> <span>React.js</span> </li>
+              <li> <span>Node.js</span> </li>
+              <li> <span> Express</span></li>
+              <li><span>Creating web API</span> </li>
+              <li> <span>Testing with JEST</span> </li>
+            </ul>
 
-          <h3>Frameworks</h3>
+          </div>
 
-          <ul>
-            <li> <i class="fab fa-react"></i>React</li>
-            <li> <i class="fab fa-node-js"></i>Node.js</li>
-          </ul>
+          <div class="skill">
+
+            <h3>Java</h3>
+
+            <ul>
+              <li> <span>Java 8</span> </li>
+              <li> <span>Spring 5</span></li>
+              <li> <span>Spring MVC</span></li>
+              <li> <span>Spring Boot 2</span></li>
+
+            </ul>
+
+          </div>
 
         </div>
 
@@ -117,71 +161,142 @@
 
     </section>
 
-    <section class="portfolio">
+    <section class="portfolio" data-section="portfolio">
 
       <h2>Portfolio</h2>
 
       <div class="wrapper">
 
-        <div class="project clearfix">
+        <div class="project">
 
-          <div class="info">
+          <h3>Grocery Shop</h3>
 
-            <p>Fundamentals</p>
+          <div class="project-description">
+
+            Technology stack: html, css, css animations, flex-box, grid-box, sass, jqery
 
           </div>
-          <div class="about">
 
-            <h3>Restaurant</h3>
 
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A maxime nobis pariatur omnis, labore
-              consequuntur distinctio laborum tenetur esse quidem id consequatur sed perferendis aliquid voluptates ad,
-              modi incidunt accusantium.</p>
+        </div>
 
-            <button>See the project</button>
-            <button>See the source code</button>
+        <div class="project">
+
+          <h3>Trecking shop</h3>
+
+          <div class="project-description">
+
+            Technology stack: html, css, css animations, flex-box, sass, javascript
+
+          </div>
+
+
+        </div>
+
+        <div class="project">
+
+          <h3>Warehouse app</h3>
+
+          <div class="project-description">
+
+            Technology stack: react.js, react router, using external api
+
+          </div>
+
+
+        </div>
+
+        <div class="project">
+
+          <h3>Milioners</h3>
+
+          <div class="project-description">
+
+            Technology stack: node, express, creating game logic
+
+          </div>
+
+
+        </div>
+
+        <div class="project">
+
+          <h3>cms system</h3>
+
+          <div class="project-description">
+
+            Technology stack: node, express, creating system logic, mongose
+
+          </div>
+
+
+        </div>
+
+        <div class="project">
+
+          <h3>api with node</h3>
+
+          <div class="project-description">
+
+            Technology stack: node, express, creating api, testing with JEST
+
+          </div>
+
+
+        </div>
+
+        <div class="project">
+
+          <h3>Gues your number game with Spring Boot</h3>
+
+          <div class="project-description">
+
+            Technology stack: java, spring boot, game logic, oop
+
+          </div>
+
+
+        </div>
+
+        <div class="project">
+
+          <h3>OOP project</h3>
+
+          <div class="project-description">
+
+            Technology stack: java, oop
+
           </div>
 
         </div>
 
-        <div class="project clearfix">
-
-          <div class="info">
-            <p>Advanced</p>
-          </div>
-          <div class="about">
-
-            <h3>Financial advisory</h3>
-
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A maxime nobis pariatur omnis, labore
-              consequuntur distinctio laborum tenetur esse quidem id consequatur sed perferendis aliquid voluptates ad,
-              modi incidunt accusantium.</p>
-
-            <button>See the project</button>
-            <button>See the source code</button>
-          </div>
-
-        </div>
+      </div>
 
     </section>
 
-    <section class="cv">
+    <section class="cv" data-section="about">
 
       <h2>About me</h2>
 
       <div class="wrapper">
 
-        <p class="description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum, voluptatibus neque omnis
-          amet ea voluptate,
-          quisquam impedit, incidunt quis molestias iusto? Omnis provident atque sit, iste facilis vel beatae soluta
-          labore, nulla aliquid totam natus, magni nostrum pariatur inventore voluptatum repudiandae nihil ut hic iusto
-          officia deleniti quia? Quasi aspernatur voluptate libero nam voluptates voluptatem, corrupti veritatis magni
-          labore quae dignissimos quos, accusamus maxime quaerat voluptas earum eaque at, qui tenetur. Nisi nam facere
-          dolorum blanditiis quibusdam beatae eos sequi commodi amet Lorem ipsum, dolor sit amet consectetur adipisicing
-          elit. Soluta a ullam eos asperiores saepe commodi, sit deleniti hic in illo ipsam nobis voluptas minima, quas
-          omnis sapiente accusantium nulla! Nisi! Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque totam
-          nesciunt, magni aliquid corporis rem? Mollitia, ea accusantium impedit pariatur debitis, iusto eum minima
-          harum maxime esse amet quo natus!</p>
+        <p class="description">My approach was project-based. I think that the fastest way to learn programming is
+          writing your own programs. That is why I created several projects showing the required skills. My journey with
+          programming started with studing Information Techonology and Econometrics at Poznan University of Economics.
+          During the studies I learned basics of java and javascript, databases and software engineering. I wanted not
+          only
+          to create programs but also to understand the processes in companies better. To do so I studied also Finance
+          and Accounting, ACCA specialization at Poznan University of Economics. During this time I gathered unique
+          knowledge which is very helpfung in today's changing environment. But the most important thing is putting
+          these
+          things into practise. First I worked in Zabka in conrolling and price strategy deparment. I saw how the
+          company works and worked a lot with excel and SAP as a user. Next exiting experience was working at Citibank,
+          in IT department, where I was responsible for a regulatory project and I worked with business defining
+          the requirements. Then I worked for two year in Santnder TFI, in risk deparment, where I worked closely with
+          investment department (risk issues like liquidity, compliance) and IT deparment (defining business
+          requirements). But at some point I decided that I want to focus on programming. So I started learing
+          intensively java and javascript. Very helpful and developing were udemy courses. I learned the required skills
+          on my own I created several projects, which I put on my github account.</p>
 
       </div>
 
@@ -197,11 +312,23 @@
 
       <p>Visit me on LinkedIn or Github!</p>
 
-      <p><i class="fab fa-github-square"></i><i class="fab fa-linkedin"></i></p>
+      <p>
+
+        <a href="https://github.com/marcinsiewodnik"><i class="fab fa-github-square"></i></a>
+
+        <a href="https://pl.linkedin.com/in/marcin-siewodnik-4681a6141"><i class="fab fa-linkedin"></i></a>
+
+      </p>
 
     </div>
 
   </footer>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <script src="jquery/goto-script.js"></script>
+
+  <script src="javascripts/script.js"></script>
 
 </body>
 
