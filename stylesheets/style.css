@@ -7,6 +7,26 @@
   box-sizing: border-box;
 }
 
+.links {
+
+  text-align: center;
+}
+
+.links a {
+
+  display: inline-block;
+
+  padding: 10px 20px;
+
+  margin: 5px;
+
+  background-color: #618930;
+
+  color: black;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
 
 html {
 
@@ -440,6 +460,8 @@ header .info .description {
 
 .portfolio .wrapper .project {
 
+
+  padding-bottom: 20px;
   border-bottom: 2px solid black;
 
 }
