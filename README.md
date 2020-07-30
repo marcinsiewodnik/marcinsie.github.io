@@ -1,3 +1,1 @@
-This is my personal page. I used html, css and a little js. 
-
-Main things: element positioning, flexbox
+This is my personal page. Here I presented my skills and my projects.
