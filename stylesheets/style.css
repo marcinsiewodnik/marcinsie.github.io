@@ -63,7 +63,7 @@ h2 {
 
 header {
 
-  background-image: url("../images/death-valley-min.jpg");
+  background-image: url("../images/death-valley-min-mobile.jpg");
 
   min-height: 100vh;
 
@@ -72,6 +72,15 @@ header {
   background-attachment: fixed;
 }
 
+@media(min-width: 1024px){
+
+  header {
+
+    background-image: url("../images/death-valley-min.jpg");
+
+  }
+
+}
 
 /* Header -> contact */
 
