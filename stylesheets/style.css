@@ -63,7 +63,7 @@ h2 {
 
 header {
 
-  background-image: url("/images/death-valley.jpg");
+  background-image: url("/images/death-valley-min.jpg");
 
   min-height: 100vh;
 
@@ -117,7 +117,7 @@ header .contact p i {
 
   header .contact p a:hover {
   
-      color: orange;
+    color:#618930;
   }
   
 }
