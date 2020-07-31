@@ -590,3 +590,8 @@ footer p i {
     font-size: 40px;
   }
 }
+
+.notification {
+
+  padding: 0 30px 20px 30px;
+}
